@@ -5,7 +5,24 @@ import Card from "./components/Card"
 import Button from "./components/Button"
 import Student from "./components/Student"
 import UserGreeting from "./components/UserGreeting"
+import List from "./components/List"
 function App() {
+  const fruits = [
+        { id: 1, name: 'grape', calogies: 52 }, 
+        { id: 2, name: 'banana', calogies: 33 }, 
+        { id: 3, name: 'cherry', calogies: 44 }, 
+        { id: 4, name: 'lemon', calogies: 55 }, 
+        { id: 5, name: 'fig', calogies: 64 }, 
+        { id: 6, name: 'apple', calogies: 15 },
+    ];
+    const vegetables = [
+        { id: 1, name: 'potatoes', calogies: 52 }, 
+        { id: 2, name: 'celery', calogies: 33 }, 
+        { id: 3, name: 'carrots', calogies: 44 }, 
+        { id: 4, name: 'corn', calogies: 55 }, 
+        { id: 5, name: 'fig', calogies: 64 }, 
+        { id: 6, name: 'broccoli', calogies: 15 },
+    ];
   return (
     <>
       {/* <Header />
@@ -23,6 +40,8 @@ function App() {
       </div>
 
       <UserGreeting username="Khiem" isLoggedIn={false} />
+      <List items={fruits} category="Fruits"/>
+      <List items={vegetables} category="Vegetables"/>
     </>
     
   )
