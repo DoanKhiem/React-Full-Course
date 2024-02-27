@@ -6,6 +6,8 @@ import Button from "./components/Button"
 import Student from "./components/Student"
 import UserGreeting from "./components/UserGreeting"
 import List from "./components/List"
+import MyComponent from "./components/MyComponent"
+import Counter from "./components/Counter"
 function App() {
   const fruits = [
         { id: 1, name: 'grape', calogies: 52 }, 
@@ -42,6 +44,8 @@ function App() {
       <UserGreeting username="Khiem" isLoggedIn={false} />
       <List items={fruits} category="Fruits"/>
       <List items={vegetables} category="Vegetables"/>
+      <MyComponent />
+      <Counter />
     </>
     
   )
