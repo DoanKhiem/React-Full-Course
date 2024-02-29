@@ -8,6 +8,7 @@ import UserGreeting from "./components/UserGreeting"
 import List from "./components/List"
 import MyComponent from "./components/MyComponent"
 import Counter from "./components/Counter"
+import Form from "./components/Form"
 function App() {
   const fruits = [
         { id: 1, name: 'grape', calogies: 52 }, 
@@ -46,6 +47,7 @@ function App() {
       <List items={vegetables} category="Vegetables"/>
       <MyComponent />
       <Counter />
+      <Form />
     </>
     
   )
