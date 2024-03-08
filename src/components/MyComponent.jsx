@@ -33,10 +33,36 @@ function MyComponent() {
     const newFood = document.getElementById("foodInput").value;
     document.getElementById("foodInput").value = "";
 
-    setFoods(f => [...f, newFood]);
+    setFoods((f) => [...f, newFood]);
   }
   function handleRemoveFood(index) {
     setFoods(foods.filter((_, i) => i !== index));
+  }
+
+  // update ARRAY of OBJECTS in state
+  const [members, setMembers] = useState([]);
+  const [memberYear, setMemberYear] = useState(new Date().getFullYear());
+  const [memberName, setMemberName] = useState("");
+  const [memberAge, setMemberAge] = useState(0);
+
+  function handleAddMember() {
+    const newMember = {year: memberYear, name: memberName, age: memberAge};
+    setMembers((m) => [...m, newMember]);
+    setMemberYear(new Date().getFullYear());
+    setMemberName("");
+    setMemberAge(0);
+  }
+  function handleRemoveMember(index) {
+    setMembers(m => m.filter((_, i) => i !== index));
+  }
+  function handleMemberYearChange(event) {
+    setMemberYear(event.target.value);
+  }
+  function handleMemberNameChange(event) {
+    setMemberName(event.target.value);
+  }
+  function handleMemberAgeChange(event) {
+    setMemberAge(event.target.value);
   }
   return (
     <div>
@@ -49,6 +75,7 @@ function MyComponent() {
       <p>Is empolyed: {isEmpolyed ? "Yes" : "No"}</p>
       <button onClick={updateIsEmpolyed}>Toggle status</button>
 
+      {/* update OBJECTS in state */}
       <div>
         <p>
           You favorite car is: {car.year} {car.make} {car.model}
@@ -58,15 +85,38 @@ function MyComponent() {
         <input type="text" value={car.model} onChange={handleModelChange} />
       </div>
 
+      {/* update ARRAYS in state */}
       <div>
         <h2>List of Food</h2>
         <ul>
           {foods.map((food, index) => (
-            <li key={index} onClick={() => handleRemoveFood(index)}>{food}</li>
+            <li key={index} onClick={() => handleRemoveFood(index)}>
+              {food}
+            </li>
           ))}
           <input type="text" id="foodInput" placeholder="Enter food name" />
           <button onClick={handleAddFood}>Add Food</button>
         </ul>
+      </div>
+
+      {/* update ARRAY of OBJECTS in state */}
+      <div>
+        <h2>List of Member Objects</h2>
+        <ul>
+          {members.map((member, index) => (
+            <li key={index} onClick={() => handleRemoveMember(index)}>
+              {member. year} {member.name} {member.age}
+            </li>
+          ))}
+        </ul>
+
+        <input type="text" value={memberYear} onChange={handleMemberYearChange} placeholder="enter member year"/>
+        <br />
+        <input type="text" value={memberName} onChange={handleMemberNameChange} placeholder="enter member name"/>
+        <br />
+        <input type="number" value={memberAge} onChange={handleMemberAgeChange} placeholder="enter member age"/>
+        <br />
+        <button onClick={handleAddMember}>Add member</button>
       </div>
     </div>
   );
