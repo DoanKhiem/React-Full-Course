@@ -15,7 +15,8 @@ function MyComponent() {
     setIsEmpolyed(!isEmpolyed);
   };
 
-  const [car, setCar] = useState({ year: 2020, make: 'Ford', model: "F16" });
+  // update OBJECTS in state
+  const [car, setCar] = useState({ year: 2020, make: "Ford", model: "F16" });
   function handleYearChange(event) {
     setCar({ ...car, year: event.target.value });
   }
@@ -24,6 +25,18 @@ function MyComponent() {
   }
   function handleModelChange(event) {
     setCar({ ...car, model: event.target.value });
+  }
+
+  // update ARRAYS in state
+  const [foods, setFoods] = useState(["apple", "banana", "cherry"]);
+  function handleAddFood() {
+    const newFood = document.getElementById("foodInput").value;
+    document.getElementById("foodInput").value = "";
+
+    setFoods(f => [...f, newFood]);
+  }
+  function handleRemoveFood(index) {
+    setFoods(foods.filter((_, i) => i !== index));
   }
   return (
     <div>
@@ -37,10 +50,23 @@ function MyComponent() {
       <button onClick={updateIsEmpolyed}>Toggle status</button>
 
       <div>
-        <p>You favorite car is: {car.year} {car.make} {car.model}</p>
+        <p>
+          You favorite car is: {car.year} {car.make} {car.model}
+        </p>
         <input type="number" value={car.year} onChange={handleYearChange} />
         <input type="text" value={car.make} onChange={handleMakeChange} />
         <input type="text" value={car.model} onChange={handleModelChange} />
+      </div>
+
+      <div>
+        <h2>List of Food</h2>
+        <ul>
+          {foods.map((food, index) => (
+            <li key={index} onClick={() => handleRemoveFood(index)}>{food}</li>
+          ))}
+          <input type="text" id="foodInput" placeholder="Enter food name" />
+          <button onClick={handleAddFood}>Add Food</button>
+        </ul>
       </div>
     </div>
   );
