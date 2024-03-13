@@ -10,6 +10,7 @@ import MyComponent from "./components/MyComponent"
 import Counter from "./components/Counter"
 import Form from "./components/Form"
 import ColorPicker from "./components/ColorPicker"
+import ToDoList from "./ToDoList"
 function App() {
   const fruits = [
         { id: 1, name: 'grape', calogies: 52 }, 
@@ -50,6 +51,7 @@ function App() {
       <Counter />
       <Form />
       <ColorPicker />
+      <ToDoList />
     </>
     
   )
