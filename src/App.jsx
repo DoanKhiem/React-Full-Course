@@ -11,6 +11,7 @@ import Counter from "./components/Counter"
 import Form from "./components/Form"
 import ColorPicker from "./components/ColorPicker"
 import ToDoList from "./ToDoList"
+import UseEffect from "./components/UseEffect"
 function App() {
   const fruits = [
         { id: 1, name: 'grape', calogies: 52 }, 
@@ -52,6 +53,7 @@ function App() {
       <Form />
       <ColorPicker />
       <ToDoList />
+      <UseEffect />
     </>
     
   )
