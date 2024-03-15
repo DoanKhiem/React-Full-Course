@@ -15,6 +15,7 @@ import UseEffect from "./components/UseEffect";
 import DigitalClock from "./components/DigitalClock";
 import ComponentA from "./components/usecontext/componentA";
 import UseRef from "./components/UseRef";
+import StopWatch from "./components/StopWatch";
 function App() {
   const fruits = [
     { id: 1, name: "grape", calogies: 52 },
@@ -60,6 +61,7 @@ function App() {
       <DigitalClock />
       <ComponentA />
       <UseRef />
+      <StopWatch />
     </>
   );
 }
