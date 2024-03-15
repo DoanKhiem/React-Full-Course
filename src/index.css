@@ -8,21 +8,25 @@
   max-width: 250px;
   display: inline-block;
 }
+
 .card .card-image {
   max-width: 60%;
   height: auto;
   border-radius: 50%;
   margin-bottom: 10px;
 }
+
 .card .card-title {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   color: hsl(0, 0%, 20%);
 }
+
 .card .card-title {
   font-family: Arial, Helvetica, sans-serif;
   color: hsl(0, 0%, 40%);
 }
+
 .student {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
@@ -30,9 +34,11 @@
   margin-bottom: 5px;
   border: 1px solid hsl(0, 0%, 50%, 0.8);
 }
+
 .student p {
   margin: 0;
 }
+
 .wellcome-message {
   font-size: 1.5em;
   background-color: hsl(120, 100%, 42%);
@@ -41,6 +47,7 @@
   border-radius: 5px;
   color: white;
 }
+
 .login-prompt {
   font-size: 1.5em;
   background-color: hsl(0, 100%, 42%);
@@ -49,6 +56,7 @@
   margin: 0;
   border-radius: 5px;
 }
+
 .list-category {
   font-size: 1.5em;
   font-weight: bold;
@@ -77,11 +85,13 @@
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .counter-display {
   font-size: 5em;
   margin-top: 0;
   margin-bottom: 25px;
 }
+
 .counter-button {
   width: 150px;
   height: 50px;
@@ -94,6 +104,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
 .counter-button:hover {
   background-color: hsl(197, 100%, 48%);
 }
@@ -104,10 +115,12 @@
   align-items: center;
 
 }
+
 h1 {
   margin: 50px;
   font-size: 3rem;
 }
+
 .color-display {
   width: 300px;
   height: 300px;
@@ -119,20 +132,33 @@ h1 {
   margin-bottom: 25px;
   transition: 0.25s ease;
 }
+
 .color-display p {
   color: hsl(0, 0%, 20%);
   font-size: 2rem;
   text-align: center;
 }
+
 .color-picker-container label {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 input[type="color"] {
   width: 75px;
   height: 50px;
   padding: 5px;
   border-radius: 10px;
   border: 3px solid hsl(0, 0%, 80%);
+}
+
+.box {
+
+  h1 {
+    color: black;
+  }
+
+  border: 3px solid;
+  padding: 25px;
 }

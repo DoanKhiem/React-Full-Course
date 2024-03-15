@@ -13,6 +13,7 @@ import ColorPicker from "./components/ColorPicker";
 import ToDoList from "./ToDoList";
 import UseEffect from "./components/UseEffect";
 import DigitalClock from "./components/DigitalClock";
+import ComponentA from "./components/usecontext/componentA";
 function App() {
   const fruits = [
     { id: 1, name: "grape", calogies: 52 },
@@ -56,6 +57,7 @@ function App() {
       <ToDoList />
       <UseEffect />
       <DigitalClock />
+      <ComponentA />
     </>
   );
 }
